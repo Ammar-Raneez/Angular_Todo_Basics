@@ -25,6 +25,11 @@ export class TodoService {
     return this.http.get<Todo[]>(`${this.todosUrl}${this.todosLimit}`);
   }
 
+  //Add todos {
+    addTodo(todo: Todo): Observable<Todo> {
+      return this.http.post<Todo>(this.todosUrl, todo, httpOptions);
+    }
+
   //delete todos
   deleteTodo(todo: Todo): Observable<Todo> {
     const url = `${this.todosUrl}/${todo.id}`
