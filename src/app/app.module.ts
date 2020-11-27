@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+import { RouterModule } from "@angular/router";
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from 'src/app-routing.module';
 import { TodosComponent } from './components/todos/todos.component';
@@ -24,7 +25,8 @@ import { AboutComponent } from './components/pages/about/about.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
